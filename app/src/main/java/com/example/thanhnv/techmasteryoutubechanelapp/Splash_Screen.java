@@ -23,7 +23,6 @@ public class Splash_Screen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        getSupportActionBar().hide();
         setContentView(R.layout.splash_screen);
         //anh sa image toi file spash_screen.xml.
         img = (ImageView)findViewById(R.id.img);

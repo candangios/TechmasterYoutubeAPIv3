@@ -4,4 +4,25 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_splash__screen">Splash_Screen</string>
+
+    <string-array name="channel_name">
+        <item>Surprise Eggs Unboxing Toys</item>
+        <item>MagicBox English Stories</item>
+        <item>Baby Big Mouth</item>
+        <item>Toy Genie Surprise</item>
+        <item>Kids Rhymes</item>
+        <!--<item>Demo... Remove comment and add Channel name</item>-->
+    </string-array>
+
+    <!--Channel Id-->
+    <string-array name="channel_ID">
+        <item>UCXLw_h6bFfPOKbDJXDUjA-Q</item>
+        <item>UCcBXr47HBrCsKplyw6iKf3g</item>
+        <item>UCWr4vlkj5xXQ4bSXNeTT2AA</item>
+        <item>UC3q2YwNGj7ktNf70PqMW72g</item>
+        <item>UCf4-1iHEgNgNWH_HKmYAtcw</item>
+        <!--<item>Demo... Remove comment and add Channel id as per Channel name</item>-->
+    </string-array>
+    <string name="title_activity_video_lists">VideoLists</string>
 </resources>
+
