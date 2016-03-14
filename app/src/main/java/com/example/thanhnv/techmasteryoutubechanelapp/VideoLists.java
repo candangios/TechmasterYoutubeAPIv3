@@ -7,10 +7,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import Asynctask.LoadListVideoAsys;
+
 public class VideoLists extends AppCompatActivity {
     ListView lvVideo;
-    String CHANNELID;
-    String YOUTUBE_URL = "", YOUTUBEAPI_KEY = DataManager.ANDROID_YOUTUBE_API_KEY;
+
+
     String NEXT_PAGE_TOKEN = "";
     ProgressDialog progress;
     int total = 0;
@@ -20,8 +22,8 @@ public class VideoLists extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_lists);
-        progress = GoogleProgress.ProgressShow(this);
-        progress.show();
+        new LoadListVideoAsys(DataManager.selectChannelID,false,this).execute();
+
     }
 
 
