@@ -13,4 +13,10 @@ public class VideoObj {
         this.video_title = title;
         this.video_thumb = thumb;
     }
+    public String getVideo_title(){
+        return video_title;
+    }
+    public String getVideo_thumb(){
+        return getVideo_thumb();
+    }
 }

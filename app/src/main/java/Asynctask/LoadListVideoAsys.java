@@ -25,6 +25,7 @@ import Model.VideoObj;
  * Created by thanhnv on 3/14/16.
  */
 public class LoadListVideoAsys extends AsyncTask<Void, Void, Void> {
+    private OntaskVideoCompleted listener;
     private URL YOUTUBE_URL;
     private String YOUTUBE_API_KEY = DataManager.ANDROID_YOUTUBE_API_KEY;
     int MAX_RESULT = DataManager.maxResult;
@@ -34,10 +35,11 @@ public class LoadListVideoAsys extends AsyncTask<Void, Void, Void> {
     String currentChannelID;
     private ArrayList<VideoObj> videiLists = new ArrayList<VideoObj>();
 
-    public LoadListVideoAsys(String channelID, boolean loadmore, Context context) {
+    public LoadListVideoAsys(String channelID, boolean loadmore, Context context, OntaskVideoCompleted listener) {
         this.context = context;
         this.currentChannelID = channelID;
         this.loadmore = loadmore;
+        this.listener = listener;
     }
 
     @Override
@@ -101,11 +103,6 @@ public class LoadListVideoAsys extends AsyncTask<Void, Void, Void> {
             return null;
         }
 
-
-
-
-
-
         return null;
     }
 
@@ -121,11 +118,14 @@ public class LoadListVideoAsys extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPostExecute(Void aVoid) {
-
-        progress.hide();
-
         super.onPostExecute(aVoid);
+        progress.hide();
+        listener.onTaskCompleted(this.videiLists);
+
+
+
     }
+
 
 
 
